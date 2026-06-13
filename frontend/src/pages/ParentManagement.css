@@ -1,0 +1,113 @@
+.parents-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.parents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.parents-header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.parents-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .parents-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.parents-editor,
+.parents-list-panel {
+  padding: 24px;
+}
+
+.parents-editor h2,
+.parents-list-panel h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.parents-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.parent-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.parent-card-header h3 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.parent-card-header span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.parent-info-rows {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.linked-students-section {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 12px;
+}
+
+.linked-students-section h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.linked-student-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.82rem;
+  background: var(--bg-inner-soft);
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+.link-student-inline-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.link-student-select {
+  flex: 1;
+}

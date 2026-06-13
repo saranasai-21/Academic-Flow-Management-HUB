@@ -1,0 +1,182 @@
+.teacher-mgmt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.teacher-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacher-header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.teacher-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .teacher-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.editor-panel,
+.list-panel {
+  padding: 24px;
+}
+
+.editor-panel h2,
+.list-panel h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.teachers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.teacher-card {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.teacher-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.teacher-initials {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.teacher-meta h3 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.teacher-meta span {
+  font-size: 0.82rem;
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.teacher-details-list {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.teacher-details-list p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.teacher-details-list strong {
+  color: var(--text-primary);
+}
+
+.teacher-classes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.class-chip {
+  background: var(--bg-pill);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+}
+
+.action-btn-sm {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn-sm:hover.edit {
+  color: var(--accent-purple);
+  background: var(--accent-purple-glow);
+}
+
+.action-btn-sm:hover.delete {
+  color: var(--accent-danger);
+  background: var(--accent-danger-glow);
+}
+
+.assigned-classes-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: var(--border-radius-sm);
+  background: var(--bg-input);
+}
+
+.assigned-classes-selector label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.assigned-classes-selector input {
+  cursor: pointer;
+}

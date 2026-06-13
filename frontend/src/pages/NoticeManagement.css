@@ -1,0 +1,125 @@
+.notice-mgmt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.notice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.notice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .notice-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-notice-panel,
+.notice-list-panel {
+  padding: 24px;
+}
+
+.add-notice-panel h2,
+.notice-list-panel h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.notices-board-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.notice-board-card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.notice-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notice-card-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.audience-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.audience-badge.all {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+  border: 1px solid hsla(185, 85%, 50%, 0.3);
+}
+
+.audience-badge.parents {
+  background: var(--accent-purple-glow);
+  color: var(--accent-purple);
+  border: 1px solid hsla(250, 85%, 65%, 0.3);
+}
+
+.audience-badge.teachers {
+  background: var(--accent-warning-glow);
+  color: var(--accent-warning);
+  border: 1px solid hsla(38, 92%, 50%, 0.3);
+}
+
+.audience-badge.students {
+  background: var(--accent-success-glow);
+  color: var(--accent-success);
+  border: 1px solid hsla(142, 75%, 48%, 0.3);
+}
+
+.notice-content {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.notice-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.notice-date-txt {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}

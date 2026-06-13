@@ -1,0 +1,15 @@
+{
+  "watch": [
+    "server.js",
+    "config",
+    "controllers",
+    "models",
+    "routes"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "*.log",
+    "*.err.log",
+    "node_modules"
+  ]
+}

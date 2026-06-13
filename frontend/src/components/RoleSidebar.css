@@ -1,0 +1,112 @@
+.role-sidebar {
+  width: var(--sidebar-width);
+  height: calc(100vh - 40px);
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.role-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.role-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+}
+
+.role-sidebar-logo h2 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.role-sidebar-logo span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.role-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.role-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.role-sidebar-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-pill);
+  border-color: var(--border-input);
+}
+
+.role-sidebar-link.active {
+  color: var(--text-primary);
+  background: var(--bg-pill-hover);
+  border-color: var(--border-focus);
+}
+
+.role-sidebar-link.active svg {
+  color: var(--accent-cyan);
+}
+
+.role-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text-primary);
+  background: var(--bg-pill);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.role-logout-btn:hover {
+  background: var(--bg-pill-hover);
+  border-color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .role-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,124 @@
+.exam-mgmt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.exam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exam-header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.exam-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .exam-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-exam-panel,
+.exam-list-panel {
+  padding: 24px;
+}
+
+.add-exam-panel h2,
+.exam-list-panel h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.exams-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exam-timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.exam-item-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.exam-date-box {
+  background: hsla(250, 85%, 65%, 0.1);
+  border: 1px solid hsla(250, 85%, 65%, 0.3);
+  padding: 10px;
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  text-align: center;
+}
+
+.exam-date-day {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-purple);
+}
+
+.exam-date-month {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.exam-info-main h3 {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exam-meta-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.exam-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.exam-pill.grade {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+  border: 1px solid hsla(185, 85%, 50%, 0.3);
+}
+
+.exam-pill.subject {
+  background: var(--accent-warning-glow);
+  color: var(--accent-warning);
+  border: 1px solid hsla(38, 92%, 50%, 0.3);
+}

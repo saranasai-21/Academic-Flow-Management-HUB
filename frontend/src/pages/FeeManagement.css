@@ -1,0 +1,118 @@
+.fees-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fees-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fees-header h1 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.fees-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .fees-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fee-stat-card {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fee-stat-info h3 {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.fee-stat-info p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.fee-stat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fee-stat-icon-wrapper.expected {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+}
+
+.fee-stat-icon-wrapper.paid {
+  background: var(--accent-success-glow);
+  color: var(--accent-success);
+}
+
+.fee-stat-icon-wrapper.outstanding {
+  background: var(--accent-danger-glow);
+  color: var(--accent-danger);
+}
+
+.billing-panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.billing-panel h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.billing-search-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.billing-search-input {
+  flex: 1;
+}
+
+.payment-row-expanded {
+  background: var(--bg-inner-soft);
+}
+
+.payment-inline-form {
+  padding: 16px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  border-top: 1px dashed var(--border-color);
+  margin-top: -1px;
+}
+
+.payment-inline-form .form-group {
+  margin-bottom: 0;
+  flex: 1;
+}
